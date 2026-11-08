@@ -402,7 +402,7 @@ jobs:
       # The advantage of doing this, though, is that we save on artifact storage space.
 
       - name: Get secret artifact runtime URL
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         id: get-runtime-url
         with:
           result-encoding: string
@@ -411,7 +411,7 @@ jobs:
             return ACTIONS_RUNTIME_URL;
 
       - name: Get secret artifact runtime token
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         id: get-runtime-token
         with:
           result-encoding: string
