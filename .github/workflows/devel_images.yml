@@ -59,7 +59,7 @@ jobs:
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Setup node and npm for the new UI build
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v7
         with:
           node-version: '18'
         if: matrix.build-targets.image-name == 'awx'

@@ -85,7 +85,7 @@ jobs:
           cp ../awx-logos/awx/ui/client/assets/* awx/ui/public/static/media/
 
       - name: Setup node and npm for new UI build
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v7
         with:
           node-version: '18'
 
