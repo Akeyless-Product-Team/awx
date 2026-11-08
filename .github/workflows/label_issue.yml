@@ -30,7 +30,7 @@ jobs:
     timeout-minutes: 20
     name: Label Issue - Community
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           show-progress: false
 

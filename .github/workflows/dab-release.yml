@@ -21,7 +21,7 @@ jobs:
           excludes: prerelease, draft
 
       - name: Check out respository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - id: dab-pinned
         name: Get current django-ansible-base pinned version
