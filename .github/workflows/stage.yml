@@ -45,20 +45,20 @@ jobs:
           exit 0
 
       - name: Checkout awx
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           show-progress: false
           path: awx
 
       - name: Checkout awx-operator
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           show-progress: false
           repository: ${{ github.repository_owner }}/awx-operator
           path: awx-operator
 
       - name: Checkout awx-logos
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           show-progress: false
           repository: ansible/awx-logos
