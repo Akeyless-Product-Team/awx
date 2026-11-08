@@ -1,10 +1,39 @@
+# Automatic dependency update PRs, following the akeylesslabs AppSec baseline.
+# Check weekly; allow up to 100 open version-update PRs per update entry.
+# Existing repository-specific cooldowns, groups and registry settings are retained.
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "docs/docsite/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 2
-    labels:
-      - "docs"
-      - "dependencies"
+- package-ecosystem: pip
+  directory: /docs/docsite
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 100
+  labels:
+  - docs
+  - dependencies
+- package-ecosystem: github-actions
+  directories:
+  - /
+  - /.github/actions/awx_devel_image
+  - /.github/actions/run_awx_devel
+  - /.github/actions/setup-python
+  - /.github/actions/setup-ssh-agent
+  - /.github/actions/upload_awx_devel_logs
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 100
+- package-ecosystem: docker
+  directory: /tools/docker-compose
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 100
+- package-ecosystem: pip
+  directories:
+  - /
+  - /awx_collection
+  - /awxkit
+  - /requirements
+  - /tools/community-bugscrub
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 100
